@@ -1,6 +1,4 @@
-import adapter.MallardDuck;
-import adapter.TurkeyAdapter;
-import adapter.WildTurkey;
+package adapter;
 import adapter.inf.IDuck;
 
 public class TestAdapter

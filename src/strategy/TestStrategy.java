@@ -1,6 +1,4 @@
-import strategy.Duck;
-import strategy.MallardDuck;
-import strategy.ModelDuck;
+package strategy;
 import strategy.fly.FlyWithWings;
 import strategy.quack.Squeak;
 

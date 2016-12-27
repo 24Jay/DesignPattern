@@ -1,4 +1,4 @@
-import facade.HomeTheaterFacade;
+package facade;
 import facade.util.Amplifier;
 import facade.util.DvdPlayer;
 import facade.util.PopcornPopper;

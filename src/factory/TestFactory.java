@@ -1,3 +1,4 @@
+package factory;
 import factory.FruitFactory;
 import factory.PizzaFactory;
 import factory.inf.IFactory;
