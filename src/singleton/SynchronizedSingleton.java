@@ -45,17 +45,15 @@ public class SynchronizedSingleton
 
 		for (int i = 0; i < 10; i++)
 		{
-			Thread thread = new Thread(new Runnable()
+			new Thread(new Runnable()
 			{
-
 				@Override
 				public void run()
 				{
 					SynchronizedSingleton a = SynchronizedSingleton.getInstance();
 					System.out.println("Newly created singleton = " + a);
 				}
-			});
-			thread.start();
+			}).start();
 		}
 	}
 }
