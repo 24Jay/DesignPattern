@@ -10,8 +10,8 @@ public class TestObserver
 		IObserver mum = new MumObserver();
 		IObserver cctv = new CCTVObserver();
 
-		station.registerReport(mum, 0);
-		station.registerReport(cctv, 1);
+		station.register(mum, 0);
+		station.register(cctv, 1);
 
 		System.out.println("##################################");
 		WeatherData data = new WeatherData("Rainning", 12);

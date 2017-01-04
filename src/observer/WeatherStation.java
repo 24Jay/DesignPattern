@@ -1,6 +1,7 @@
 package observer;
 
 import observer.inf.IObserver;
+import observer.inf.IStation;
 
 /***
  * 观察者模式定义了对象之间的一对多依赖，当一个对象改变状态时，它的所有的依赖者都会收到通知并且自动更新
@@ -9,7 +10,7 @@ import observer.inf.IObserver;
  *
  */
 
-public class WeatherStation
+public class WeatherStation implements IStation
 {
 	IObserver[] observers;
 
@@ -24,7 +25,8 @@ public class WeatherStation
 	 * @param observer
 	 * @param i
 	 */
-	public void registerReport(IObserver observer, int i)
+	@Override
+	public void register(IObserver observer, int i)
 	{
 		observers[i] = observer;
 	}
