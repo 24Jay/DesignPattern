@@ -2,7 +2,7 @@ package decorator.inf;
 
 public abstract class Beverage
 {
-	String description = "Unknow beverage";
+	public String description = "Unknow beverage";
 	
 	public String getDescription()
 	{
