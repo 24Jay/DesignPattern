@@ -50,6 +50,11 @@ public class GambleMachine
 	{
 		this.state = state;
 	}
+	
+	public IState getState()
+	{
+		return state;
+	}
 
 	public IState getSoldOut()
 	{

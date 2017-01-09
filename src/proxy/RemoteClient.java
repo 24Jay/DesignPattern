@@ -15,7 +15,9 @@ public class RemoteClient
 	{
 		try
 		{
-			IRemote remote = (IRemote) Naming.lookup("rmi://127.0.0.1:8888/RemoteHello");
+			System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%55");
+			IRemote remote = (IRemote) Naming.lookup("rmi://10.252.44.119:8888"
+					+ "/RemoteHello");
 			System.out.println("Go = " + remote.sayHello());
 		} catch (RemoteException | NotBoundException | MalformedURLException e)
 		{
