@@ -8,6 +8,7 @@ public class NoQuarter implements IState
 
 	/**
 	 * 这里最好要加上序列化ID,会抛出InvalidClassException
+	 * http://stackoverflow.com/questions/7173352/java-io-invalidclassexception
 	 */
 	private static final long serialVersionUID = 2383247520489250193L;
 	

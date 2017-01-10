@@ -7,6 +7,7 @@ public class HasQuarter implements IState
 {
 	/**
 	 * 这里最好要加上序列化ID,会抛出InvalidClassException
+	 * http://stackoverflow.com/questions/7173352/java-io-invalidclassexception
 	 */
 	private static final long serialVersionUID = -5603828484611027247L;
 	private transient RemoteGumballMachine machine;

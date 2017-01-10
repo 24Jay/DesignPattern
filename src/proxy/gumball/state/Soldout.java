@@ -7,6 +7,7 @@ public class Soldout implements IState
 {
 	/**
 	 * 这里最好要加上序列化ID,会抛出InvalidClassException
+	 * http://stackoverflow.com/questions/7173352/java-io-invalidclassexception
 	 */
 	private static final long serialVersionUID = -3433903771213257645L;
 	
