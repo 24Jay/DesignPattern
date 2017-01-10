@@ -1,4 +1,4 @@
-package proxy;
+package proxy.rmi;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -7,7 +7,6 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-import proxy.inf.IRemote;
 
 public class RemoteClient
 {

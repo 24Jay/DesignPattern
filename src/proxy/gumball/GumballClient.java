@@ -4,27 +4,26 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
 
-import proxy.gumball.inf.IMonitor;
+import proxy.gumball.inf.IRemoteMachine;
 
-public class GumballMachineMonitor
+public class GumballClient
 {
 
-	public static void main(String[] args)
+	public static void main(String []args)
 	{
-		
+
 		try
 		{
 			System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-			IMonitor remote = (IMonitor) Naming.lookup("rmi://127.0.0.1:8888"
+			IRemoteMachine remote = (IRemoteMachine) Naming.lookup("rmi://127.0.0.1:8888"
 					+ "/RemoteGumballMachine");
-			System.out.println(remote.getState());
+			System.out.println("Location = "+remote.getLocation());
+			System.out.println("Count = "+remote.getCount());
+			System.out.println("State = "+remote.getState());
 		} catch (RemoteException | NotBoundException | MalformedURLException e)
 		{
 			e.printStackTrace();
 		}
 	}
-
 }

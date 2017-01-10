@@ -1,10 +1,10 @@
-package proxy;
+package proxy.rmi;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-import proxy.inf.IRemote;
+
 
 public class RemoteImpl  extends UnicastRemoteObject implements IRemote
 {

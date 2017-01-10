@@ -1,4 +1,4 @@
-package proxy.inf;
+package proxy.rmi;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
