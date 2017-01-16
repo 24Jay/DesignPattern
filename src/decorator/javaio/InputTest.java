@@ -7,15 +7,36 @@ import java.io.InputStream;
 
 public class InputTest
 {
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args)
 	{
-		int c;
-		InputStream lowerInput = new LowerCaseInputStream(
-				new BufferedInputStream(new FileInputStream("src/decorator/javaio/text.txt")));
-
-		while ((c = lowerInput.read()) >= 0)
+		int c = 0;
+		InputStream lowerInput = null;
+		try
 		{
-			System.out.print((char)c);
+			lowerInput = new LowerCaseInputStream(
+					new BufferedInputStream(new FileInputStream("src/decorator/javaio/text.txt")));
+			while ((c = lowerInput.read()) >= 0)
+			{
+				System.out.print((char) c);
+			}
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (lowerInput != null)
+			{
+				try
+				{
+					lowerInput.close();
+				}
+				catch (IOException e)
+				{
+					e.printStackTrace();
+				}
+			}
 		}
 
 	}
