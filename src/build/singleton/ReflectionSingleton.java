@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * 此例子证明了通过反射，依然可以破解单利class，生成多个实例
+ * 此例子证明了通过反射，依然可以破解单例class，生成多个实例
  * 
  * @author jay
  *
