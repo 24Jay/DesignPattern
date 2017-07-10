@@ -49,7 +49,7 @@ public class DoubleCheckedSingleton
 		return uniqueInstance;
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException
 	{
 
 		for (int i = 0; i < 10; i++)
@@ -64,5 +64,11 @@ public class DoubleCheckedSingleton
 				}
 			}).start();
 		}
+		
+		
+		Class<?> cl = DoubleCheckedSingleton.class;
+		DoubleCheckedSingleton ins1 = (DoubleCheckedSingleton) cl.newInstance();
+		DoubleCheckedSingleton ins2 = (DoubleCheckedSingleton) cl.newInstance();
+		System.out.println("ins1==ins2 : "+(ins1 == ins2));
 	}
 }

@@ -35,7 +35,7 @@ public class SimpleSingleton
 		return uniqueInstance;
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException
 	{
 
 		for (int i = 0; i < 10; i++)
@@ -50,6 +50,11 @@ public class SimpleSingleton
 				}
 			}).start();
 		}
+		
+		Class<SimpleSingleton> cl = SimpleSingleton.class;
+		SimpleSingleton ins1 = cl.newInstance();
+		SimpleSingleton ins2 = cl.newInstance();
+		System.out.println("ins1==ins2 : "+(ins1==ins2));
 	}
 }
 

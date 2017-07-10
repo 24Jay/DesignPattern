@@ -1,5 +1,7 @@
 package build.singleton;
 
+import java.lang.reflect.Constructor;
+
 /**
  * @author jay
  *
@@ -25,7 +27,7 @@ public class EagerlySinleton
 		return uniqueInstance;
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException
 	{
 
 		for (int i = 0; i < 10; i++)
@@ -40,5 +42,13 @@ public class EagerlySinleton
 				}
 			}).start();
 		}
+		
+		/***
+		 * 通过反射来破解单例模式
+		 */
+		Class<?> cl = EagerlySinleton.class;
+		EagerlySinleton ins1 = (EagerlySinleton) cl.newInstance();
+		EagerlySinleton ins2 = (EagerlySinleton) cl.newInstance();
+		System.out.println("ins1==ins2 : "+(ins1 == ins2));
 	}
 }

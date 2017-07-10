@@ -40,7 +40,7 @@ public class SynchronizedSingleton
 		return uniqueInstance;
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException
 	{
 
 		for (int i = 0; i < 10; i++)
@@ -55,5 +55,10 @@ public class SynchronizedSingleton
 				}
 			}).start();
 		}
+		
+		Class<SynchronizedSingleton> cl = SynchronizedSingleton.class;
+		SynchronizedSingleton ins1 = cl.newInstance();
+		SynchronizedSingleton ins2 = cl.newInstance();
+		System.out.println("ins1==ins2 : "+(ins1==ins2));
 	}
 }
